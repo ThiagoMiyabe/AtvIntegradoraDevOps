@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar Hábitos</title>
+    <link
+      rel="shortcut icon"
+      href="../public/assets/bebetterbro.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../public/styles/today.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <h1>Atividades do Dia</h1>
+    <div class="container">
+      <div class="metas">
+        <div class="divider"></div>
+        <!-- Metas não concluídas -->
+        <h2>Metas Não Concluídas</h2>
+        <ul>
+          <% metasNaoConcluidas.forEach(metas => { %>
+          <li>
+            <%= metas.nome_meta %> <% if (metas.descricao_meta) { %> - <%=
+            metas.descricao_meta %> <% } %>
+            <!-- Botão para marcar como concluída -->
+            <form
+              action="/marcar-meta-concluida/<%= metas.id_metas %>"
+              method="post"
+            >
+              <button type="submit">
+                <i
+                  class="ph ph-check-circle"
+                  style="font-size: 1.8rem; color: #7221c2"
+                ></i>
+              </button>
+            </form>
+          </li>
+          <% }); %>
+        </ul>
+        <!-- Botão para mostrar metas concluídas -->
+        <form
+          action="/mostrar-metas-concluidas"
+          method="get"
+          class="concluidas"
+        >
+          <button type="submit">Metas Concluídas</button>
+        </form>
+      </div>
+
+      <div class="tarefas">
+        <div class="divider"></div>
+        <h2>Tarefas</h2>
+        <ul>
+          <% tarefas.forEach(tarefa => { %>
+          <li>
+            <%= tarefa.nome_tarefa %> <% if (tarefa.descricao_tarefa) { %> - <%=
+            tarefa.descricao_tarefa %> <% } %> <% if (tarefa.importancia) { %> -
+            Importância: <%= tarefa.importancia %> <% } %>
+            <!-- Verifica se a tarefa ainda não foi concluída -->
+            <% if (!tarefa.concluida) { %>
+            <!-- Botão para marcar como concluída -->
+            <form
+              action="/marcar-tarefa-concluida/<%= tarefa.id_tarefa %>"
+              method="post"
+            >
+              <button type="submit">
+                <i
+                  class="ph ph-check-circle"
+                  style="font-size: 1.8rem; color: #c28121"
+                ></i>
+              </button>
+            </form>
+            <% } %>
+            <!-- Botão para deletar -->
+            <form
+              action="/deletar-tarefa/<%= tarefa.id_tarefa %>"
+              method="post"
+            >
+              <button type="submit">
+                <i
+                  class="ph ph-x-circle"
+                  style="font-size: 1.8rem; color: #ff0000"
+                ></i>
+              </button>
+            </form>
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+      <div class="habitos">
+        <div class="divider"></div>
+        <h2>Hábitos</h2>
+        <ul>
+          <% habito.forEach(habito => { %>
+          <li>
+            <%= habito.nome_habito %> <% if (habito.descricao_habito) { %> - <%=
+            habito.descricao_habito %> <% } %>
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+    </div>
+    <form action="/log" method="get">
+      <button type="submit" class="primary">
+        <i
+          class="ph ph-arrow-u-up-left"
+          style="font-size: 1.6rem; color: #f2f8fd"
+        ></i
+        >Voltar
+      </button>
+    </form>
+  </body>
+</html>

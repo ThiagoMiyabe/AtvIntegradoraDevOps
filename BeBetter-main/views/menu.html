@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="shortcut icon"
+      href="../public/assets/bebetterbro.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../public/styles/menu.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <div class="image" id="teste">
+          <img
+            src="../public/assets/bebetterbro.png"
+            alt="Ícone de um homem subindo uma montanha com uma paisagem bonita, simbolizando a superação de um desafio"
+          />
+        </div>
+        <div class="title">BeBetter</div>
+      </div>
+      <div class="info">
+        <h2>Como saber o que devo criar?</h2>
+        <p>
+          O sistema foi criado para que o usuário decida o que ele gostaria de
+          fazer, mas se fosse para ter um dicionário explicando o que é cada
+          coisa, seria assim:
+        </p>
+        <ul>
+          <li>
+            <span class="habito">Hábito:</span> algo que você gostaria de fazer
+            recorrentemente. Ex: ler 30 minutos por dia
+          </li>
+          <li>
+            <span class="tarefa">Tarefa:</span> algo que você queira fazer, mas
+            que só acontece uma única vez. Ex: terminar a tarefa da Tânia
+          </li>
+          <li>
+            <span class="meta">Meta:</span> algo que você gostaria de atingir,
+            serve mais como uma motivação. Ex: juntar 1000 reais
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="form-wrapper habito">
+        <i
+          class="ph ph-arrows-clockwise"
+          style="font-size: 4.8rem; color: #2181c2"
+        ></i>
+        <form action="/registro_habito" method="get">
+          <button type="submit" class="habito">Registrar Habito</button>
+        </form>
+      </div>
+      <div class="form-wrapper tarefa">
+        <i
+          class="ph ph-check-circle"
+          style="font-size: 4.8rem; color: #c28121"
+        ></i>
+        <form action="/registro_tarefa" method="get">
+          <button type="submit" class="tarefa">Registrar Tarefas</button>
+        </form>
+      </div>
+      <div class="form-wrapper meta">
+        <i class="ph ph-target" style="font-size: 4.8rem; color: #7221c2"></i>
+        <form action="/registro_meta" method="get">
+          <button type="submit" class="meta">Registrar Metas</button>
+        </form>
+      </div>
+      <div class="form-wrapper search">
+        <i
+          class="ph ph-magnifying-glass"
+          style="font-size: 4.8rem; color: #333"
+        ></i>
+        <form action="/atividades-do-dia" method="get">
+          <button type="submit" class="search">Ver tarefas do dia</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

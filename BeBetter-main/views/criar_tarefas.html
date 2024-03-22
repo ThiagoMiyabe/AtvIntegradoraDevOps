@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar Tarefas</title>
+    <link
+      rel="shortcut icon"
+      href="../public/assets/bebetterbro.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../public/styles/create.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="form">
+      <form action="/registrartarefa" method="post">
+        <div class="input-wrapper">
+          <label for="nometarefa">Nome da Tarefa</label>
+          <input
+            type="text"
+            placeholder="Terminar o projeto de extensão"
+            id="nome_tarefa"
+            name="nome_tarefa"
+          />
+        </div>
+        <div class="input-wrapper">
+          <label for="dia_tarefa">Data Tarefa</label>
+          <input id="dia_tarefa" name="dia_tarefa" type="date" />
+        </div>
+        <div class="input-wrapper">
+          <label for="descricaohabito">Descrição</label>
+          <input
+            type="text"
+            placeholder="Para ir pra última fase"
+            id="descricao_tarefa"
+            name="descricao_tarefa"
+          />
+        </div>
+        <div class="input-wrapper">
+          <label for="importanciatarefa">Importância da Tarefa</label>
+          <select name="importancia" id="importancia">
+            <option value="P1">P1</option>
+            <option value="P2" selected>P2</option>
+            <option value="P3">P3</option>
+          </select>
+        </div>
+        <button type="submit" class="primary tarefa">Criar</button>
+      </form>
+      <form action="/log" method="get" class="no-border">
+        <button type="submit">Voltar</button>
+      </form>
+    </div>
+  </body>
+</html>

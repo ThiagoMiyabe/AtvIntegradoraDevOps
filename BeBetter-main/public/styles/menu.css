@@ -1,0 +1,120 @@
+:root {
+  font-size: 62.5%;
+  --blue50: #f2f8fd;
+  --blue100: #e3effb;
+  --blue500: #2181c2;
+  --blue950: #0f2942;
+  --orange: #c28121;
+  --purple: #7221c2;
+  --dark: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--blue100);
+  color: #333;
+
+  padding-top: 2rem;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto 80px;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.title {
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+
+/* INFO */
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+p,
+li {
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+span {
+  font-weight: 700;
+}
+
+.habito {
+  color: var(--blue500);
+}
+
+.tarefa {
+  color: var(--orange);
+}
+
+.meta {
+  color: var(--purple);
+}
+
+.grid {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 320px);
+  place-content: center;
+
+  gap: 20px;
+}
+
+.form-wrapper {
+  padding: 6rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 20px;
+}
+
+.form-wrapper.habito {
+  background-color: #2182c283;
+}
+
+.form-wrapper.tarefa {
+  background-color: #c2812183;
+}
+
+.form-wrapper.meta {
+  background-color: #7221c283;
+}
+
+.form-wrapper.search {
+  background-color: #33333383;
+}
+
+button {
+  border: none;
+  background: none;
+  color: #333;
+
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+button:hover {
+  cursor: pointer;
+}

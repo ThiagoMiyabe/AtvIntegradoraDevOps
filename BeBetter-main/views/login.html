@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faça Login</title>
+    <link
+      rel="shortcut icon"
+      href="../public/assets/bebetterbro.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../public/styles/signup.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="image">
+      <img
+        src="../public/assets/Climbing (1).jpg"
+        alt="Uma pessoa escalando uma montanha alta"
+      />
+    </div>
+    <div class="form">
+      <form action="/logado" method="post">
+        <div class="input-wrapper">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            placeholder="joaodasilva@email.com"
+            id="email"
+            name="email"
+          />
+        </div>
+        <div class="input-wrapper">
+          <label for="login-user-password">Senha</label>
+          <input
+            type="password"
+            placeholder="********"
+            id="senha"
+            name="senha"
+          />
+        </div>
+        <button type="submit" class="primary">entrar</button>
+      </form>
+      <form action="/" method="get" class="no-border">
+        <button type="submit">Voltar</button>
+      </form>
+    </div>
+  </body>
+</html>

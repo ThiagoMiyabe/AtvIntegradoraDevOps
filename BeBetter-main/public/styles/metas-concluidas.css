@@ -1,0 +1,72 @@
+:root {
+  font-size: 62.5%;
+  --blue50: #f2f8fd;
+  --blue100: #e3effb;
+  --blue500: #2181c2;
+  --blue950: #0f2942;
+  --orange: #c28121;
+  --purple: #7221c2;
+  --dark: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--blue100);
+  color: #333;
+
+  display: grid;
+  justify-content: center;
+
+  padding-top: 4rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+  display: flex;
+  align-items: center;
+
+  gap: 0.8rem;
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background-color: var(--purple);
+
+  margin: 1.6rem 0;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  font-size: 1.8rem;
+}
+
+.primary {
+  border: none;
+  background: none;
+
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  background-color: var(--blue500);
+  color: var(--blue50);
+
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+
+  display: flex;
+  gap: 0.8rem;
+}

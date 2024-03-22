@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar Metas</title>
+    <link
+      rel="shortcut icon"
+      href="../public/assets/bebetterbro.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../public/styles/create.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="form">
+      <form action="/criar_metas" method="post">
+        <div class="input-wrapper">
+          <label for="nomemeta">Nome da Meta</label>
+          <input
+            type="text"
+            placeholder="Juntar 1000 reais"
+            id="nome_meta"
+            name="nome_meta"
+          />
+        </div>
+        <div class="input-wrapper">
+          <label for="desdescricaometa">Descrição da Meta</label>
+          <input
+            type="text"
+            placeholder="Quero viajar pra fora do estado"
+            id="descricao_meta"
+            name="descricao_meta"
+          />
+        </div>
+        <button type="submit" class="primary meta">Criar</button>
+      </form>
+      <form action="/log" method="get" class="no-border">
+        <button type="submit">Voltar</button>
+      </form>
+    </div>
+  </body>
+</html>
